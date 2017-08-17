@@ -1,9 +1,18 @@
-# Frasco [![GitHub release](https://img.shields.io/github/release/ixkaito/frasco.svg)](https://github.com/ixkaito/frasco/releases) [![Build Status](https://travis-ci.org/ixkaito/frasco.svg?branch=master)](https://travis-ci.org/ixkaito/frasco) [![license](https://img.shields.io/github/license/ixkaito/frasco.svg?maxAge=2592000)](https://github.com/ixkaito/frasco/blob/master/LICENSE)
+# Jekyll Prototyping project based on Frasco (https://ixkaito.github.io/frasco/) with a few omissions/additions
 
-__Jekyll starter project including full setup for gulp, Sass, Autoprefixer, Bourbon/Neat/Bitters, Browserify, imagemin, Browsersync, PostCSS etc.__
+* Removed minima
+* Removed bourbon/bitters/neat
+* Added custom breakpoint sass
+* Added normalize
+* Added hamburgers
+* Added slideout
+* Custom forms styles
 
 ## Documentation
 
+To use just cd into the repo and then `npm install` and `npm start`.
+
+See Frasco Documentation
 https://ixkaito.github.io/frasco/
 
 ## Copyright / License
