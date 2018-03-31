@@ -4,8 +4,31 @@
   {% include head.html %}
 
   <body>
-
-    <main class="page-content" aria-label="Content">
+    <nav id="menu">
+        <div class="left">
+          <a href="#" class="logo"><img src="http://placehold.it/128x34?text-logo" alt=""></a>
+          <ul>
+              <li><a href="#">Menu One</a></li>
+              <li><a href="#">Menu Two</a></li>
+              <li><a href="#">Menu Three</a></li>
+              <li><a href="#">Menu Four V</a>
+                  <ul>
+                      <li><a href="#">Dropdown Link</a></li>
+                      <li><a href="#">Dropdown Link</a></li>
+                      <li><a href="#">Dropdown Link</a></li>
+                      <li><a href="#">Dropdown Link</a></li>
+                  </ul>
+              </li>
+          </ul>
+      </div>
+      <div class="right">
+          <ul>
+              <li><a href="#">Menu One</a></li>
+          </ul>
+          <a href="#" class="cta-button">Button</a>
+      </div>
+    </nav>
+    <main class="page-content" aria-label="Content" id="panel">
       <div class="wrapper">
         {{ content }}
       </div>
