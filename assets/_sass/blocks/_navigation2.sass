@@ -4,6 +4,10 @@ nav.mobile-nav
     justify-content: space-between
     align-items: center
     padding: 24px 35px
+    z-index: 2
+    position: absolute
+    top: 0
+    width: 100%
     +tablet
         display: none
     a.trigger
@@ -21,6 +25,10 @@ nav.mobile-nav
 // Style the menu that shows up on tablets and larger.
 #panel nav.navigation-bar-2
     display: none
+    z-index: 2
+    position: absolute
+    top: 0
+    width: 100%
     +tablet
         width: 100%
         display: flex
