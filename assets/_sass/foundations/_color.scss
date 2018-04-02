@@ -1,3 +1,20 @@
 $gray: #727272;
 $light-gray: #ebebeb;
-$dark: #000000;
+$dark: #1F8B49;
+$white: #ffffff;
+
+.white {
+    color: $white;
+}
+
+.gray {
+    color: $gray;
+}
+
+.dark {
+    color: $dark;
+}
+
+.light-gray {
+    color: $light-gray;
+}

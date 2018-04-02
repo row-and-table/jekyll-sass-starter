@@ -11,9 +11,13 @@
       'menu': document.getElementById('menu'),
       'padding': 256,
       'tolerance': 70,
+      'duration': 10,
       'side': 'right'
     });
     document.querySelector('.trigger').addEventListener('click', function() {
+        slideout.toggle();
+      });
+    document.querySelector('.trigger2').addEventListener('click', function() {
         slideout.toggle();
       });
 </script>

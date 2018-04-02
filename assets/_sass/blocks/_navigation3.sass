@@ -1,0 +1,84 @@
+// Style the logo and nav trigger for phones.
+nav.mobile-nav
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 24px 35px
+    z-index: 2
+    position: absolute
+    top: 0
+    width: 100%
+    +tablet
+        display: none
+    a.trigger
+        padding: 13px 30px
+        background-color: $dark
+        color: white
+        text-decoration: none
+        border-radius: 3px
+    a.trigger:hover
+        background: transparent
+        color: $dark
+        border: 1px solid $dark
+        padding: 12px 29px
+
+// Style the menu that shows up on tablets and larger.
+#panel nav.navigation-bar-3
+    justify-content: space-between
+    align-items: center
+    padding: 48px 70px
+    display: none
+    z-index: 2
+    position: absolute
+    top: 0
+    width: 100%
+    +tablet
+        display: flex
+    a.trigger2
+        padding: 13px 30px
+        background-color: $dark
+        color: white
+        text-decoration: none
+        border-radius: 3px
+    a.trigger2:hover
+        background: transparent
+        color: $dark
+        border: 1px solid $dark
+        padding: 12px 29px
+
+// Style the slideout menu
+nav#menu
+    background: $light-gray
+    padding: 20px;
+    .left a.logo
+        display: none
+    ul
+        list-style-type: none
+        padding-left: 0
+        margin: 0
+        li
+            padding-bottom: 25px
+            ul
+                padding-top: 25px
+                li
+                    padding-left: 20px
+                li:last-of-type
+                    padding-bottom: 0
+    a
+        text-decoration: none
+    a.cta-button
+        padding: 13px 30px
+        background-color: $dark
+        color: white
+        text-decoration: none
+        border-radius: 3px
+        width: 100%
+        display: block
+        text-align: center
+    a.cta-button:hover
+        background: transparent
+        color: $dark
+        border: 1px solid $dark
+        padding: 12px 29px
+
+
