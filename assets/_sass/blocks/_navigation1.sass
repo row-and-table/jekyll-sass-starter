@@ -4,6 +4,10 @@ nav.mobile-nav
     justify-content: space-between
     align-items: center
     padding: 24px 35px
+    z-index: 2
+    position: absolute
+    top: 0
+    width: 100%
     +tablet
         display: none
     a.trigger
@@ -18,12 +22,42 @@ nav.mobile-nav
         border: 1px solid $dark
         padding: 12px 29px
 
+nav.mobile-nav.navbar
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 5px 20px
+    height: 60px
+    z-index: 2
+    position: sticky
+    top: 0
+    width: 100%
+    background-color: $dark
+    +tablet
+        display: none
+    a.trigger
+        padding: 0
+        background-color: none
+        color: white
+        text-decoration: none
+        border-radius: 0
+    a.trigger:hover
+        background: transparent
+        color: $dark
+        border: none
+        padding: 0
+
 // Style the menu that shows up on tablets and larger.
 #panel nav.navigation-bar-1
     display: none
+    z-index: 2
+    position: absolute
+    top: 0
+    width: 100%
     +tablet
         width: 100%
         display: flex
+
     div.left
         padding: 46px 0px 46px 70px
         flex-grow: 1
@@ -42,8 +76,9 @@ nav.mobile-nav
 
                 a
                     text-decoration: none
-            li:hover a
-                color: lighten($dark, .3)
+
+            li a:hover
+                color: $gray
             li > ul
                 display: none
                 flex-direction: column
@@ -59,8 +94,8 @@ nav.mobile-nav
                     border-bottom: 1px solid $dark
                 li:last-of-type
                     border-bottom: none
-                li:hover a
-                    color: lighten($dark, .3)
+                li a:hover
+                    color: $gray
     div.right
         display: none
         +desktop
@@ -78,7 +113,7 @@ nav.mobile-nav
 
                 a
                     text-decoration: none
-            li:hover a
+            li a:hover
                 color: lighten($dark, .3)
             li > ul
                 display: none
@@ -95,8 +130,8 @@ nav.mobile-nav
                     border-bottom: 1px solid $dark
                 li:last-of-type
                     border-bottom: none
-                li:hover a
-                    color: lighten($dark, .3)
+                li a:hover
+                    color: $gray
         a.cta-button
             padding: 13px 30px
             background-color: $dark
@@ -108,6 +143,111 @@ nav.mobile-nav
                 color: $dark
                 border: 1px solid $dark
                 padding: 12px 29px
+#panel nav.navigation-bar-1.navbar
+    display: none
+    z-index: 2
+    position: sticky
+    top: 0
+    width: 100%
+    height: 60px
+    background-color: $dark
+    +tablet
+        width: 100%
+        display: flex
+
+    div.left
+        padding: 5px 0px 5px 70px
+        flex-grow: 1
+        display: flex
+        align-items: center
+        a.logo
+            margin-right: 32px
+        ul
+            list-style-type: none
+            padding-left: 0
+
+            li
+                margin-right: 32px
+                display: inline-block
+                position: relative
+
+                a
+                    text-decoration: none
+
+            li a:hover
+                color: $gray
+            li > ul
+                display: none
+                flex-direction: column
+                width: 240px
+            li:hover > ul
+                position: absolute
+                display: block
+                background: $light-gray
+                padding-top: 5px
+                li
+                    padding: 10px
+                    width: 100%
+                    border-bottom: 1px solid $dark
+                li:last-of-type
+                    border-bottom: none
+                li a
+                    color: $dark
+                li:hover a
+                    color: $gray
+    div.right
+        display: none
+        +desktop
+            display: flex
+        padding: 5px 70px
+        flex-grow: 0
+        align-items: center
+        ul
+            list-style-type: none
+            padding-left: 0
+
+            li
+                margin-right: 32px
+                display: inline-block
+
+                a
+                    text-decoration: none
+            li a:hover
+                color: $gray
+            li > ul
+                display: none
+                flex-direction: column
+                width: 240px
+            li:hover > ul
+                position: absolute
+                display: block
+                background: $light-gray
+                padding-top: 5px
+                li
+                    padding: 10px
+                    width: 100%
+                    border-bottom: 1px solid $dark
+                li:last-of-type
+                    border-bottom: none
+                li a
+                    color: $dark
+                li a:hover
+                    color: $gray
+        a.cta-button
+            padding: 0
+            background-color: none
+            color: white
+            text-decoration: none
+            border-radius: 0
+        a.cta-button:hover
+                background: transparent
+                color: $gray
+                border: none
+                padding: 0
+
+.hero ul li a, #panel nav.navigation-bar-1.navbar ul li a
+    color: $white
+
 
 // Style the slideout menu
 nav#menu

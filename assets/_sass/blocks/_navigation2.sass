@@ -4,6 +4,10 @@ nav.mobile-nav
     justify-content: space-between
     align-items: center
     padding: 24px 35px
+    z-index: 2
+    position: absolute
+    top: 0
+    width: 100%
     +tablet
         display: none
     a.trigger
@@ -17,10 +21,38 @@ nav.mobile-nav
         color: $dark
         border: 1px solid $dark
         padding: 12px 29px
+nav.mobile-nav.navbar
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 5px 20px
+    height: 60px
+    z-index: 2
+    position: sticky
+    top: 0
+    width: 100%
+    background-color: $dark
+    +tablet
+        display: none
+    a.trigger
+        padding: 0
+        background-color: none
+        color: white
+        text-decoration: none
+        border-radius: 0
+    a.trigger:hover
+        background: transparent
+        color: $dark
+        border: none
+        padding: 0
 
 // Style the menu that shows up on tablets and larger.
 #panel nav.navigation-bar-2
     display: none
+    z-index: 2
+    position: absolute
+    top: 0
+    width: 100%
     +tablet
         width: 100%
         display: flex
@@ -120,6 +152,127 @@ nav.mobile-nav
                 color: $dark
                 border: 1px solid $dark
                 padding: 12px 29px
+
+// Style the navbar variant
+
+#panel nav.navigation-bar-2.navbar
+    display: none
+    z-index: 2
+    position: sticky
+    top: 0
+    width: 100%
+    height: 60px
+    background-color: $dark
+    +tablet
+        width: 100%
+        display: flex
+    div.left
+        padding: 5px 0px 5px 70px
+        display: flex
+        align-items: center
+        order: 2
+        flex-grow: 1
+        +desktop
+            order: 1
+        ul
+            list-style-type: none
+            padding-left: 0
+
+            li
+                margin-right: 32px
+                display: inline-block
+                position: relative
+
+                a
+                    text-decoration: none
+                    color: $white
+            li:hover a
+                color: $gray
+            li > ul
+                display: none
+                flex-direction: column
+                width: 240px
+            li:hover > ul
+                position: absolute
+                display: block
+                background: $light-gray
+                padding-top: 5px
+                li
+                    padding: 10px
+                    width: 100%
+                    border-bottom: 1px solid $dark
+                li:last-of-type
+                    border-bottom: none
+                li a
+                    color: $dark
+                li:hover a
+                    color: $gray
+    div.logo
+        display: flex
+        justify-content: center
+        align-items: center
+        order: 1
+        flex-grow: 0
+        padding: 5px
+        +desktop
+            order: 2
+
+
+
+
+
+    div.right
+        display: none
+        order: 3
+        +desktop
+            display: flex
+        padding: 5px 70px
+        flex-grow: 1
+        justify-content: flex-end
+        align-items: center
+        ul
+            list-style-type: none
+            padding-left: 0
+
+            li
+                margin-right: 32px
+                display: inline-block
+
+                a
+                    text-decoration: none
+                    color: $white
+            li:hover a
+                color: $gray
+            li > ul
+                display: none
+                flex-direction: column
+                width: 240px
+            li:hover > ul
+                position: absolute
+                display: block
+                background: $light-gray
+                padding-top: 5px
+                li
+                    padding: 10px
+                    width: 100%
+                    border-bottom: 1px solid $dark
+                li:last-of-type
+                    border-bottom: none
+                li a
+                    color: $dark
+                li:hover a
+                    color: $gray
+        a.cta-button
+            padding: 0
+            background-color: none
+            color: white
+            text-decoration: none
+            border-radius: 0
+        a.cta-button:hover
+                background: transparent
+                color: $gray
+                border: none
+                padding: 0
 
 // Style the slideout menu
 nav#menu
