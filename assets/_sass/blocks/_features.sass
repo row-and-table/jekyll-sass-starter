@@ -114,4 +114,45 @@ section.features-7
         +tablet
             border-top: none
             border-left: 1px solid $light-gray
+section.features-8
+    padding: 100px
+    text-align: center
+    display: flex
+    flex-direction: column
+    justify-content: center
+    h2
+        font-size: 3em
+    .features-grid
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        grid-column-gap: 2em
+        grid-row-gap: 2em
+        +tablet
+            grid-template-columns: repeat(4, 1fr)
+        .feature
+            max-width: 263px
+section.features-9
+    padding: 100px
+    text-align: center
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    h2
+        font-size: 3em
+        margin-bottom: 0
+    p
+        margin-bottom: 2em
+    .features-grid
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-column-gap: 2em
+        grid-row-gap: 2em
+        justify-items: center
+        max-width: 500px
+        margin-bottom: 1.5em
+        .feature
+            max-width: 150px
+
+
 
