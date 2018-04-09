@@ -286,3 +286,110 @@ layout: default
     </div>
     <a href="#" class="button">Button</a>
 </section>
+<section class="features-tabs">
+    <div class="feature-area active" id="tab-1">
+        <div class="feature-text">
+            <h2>Awesome Headline 1</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos sapiente voluptas adipisci, velit voluptatum temporibus asperiores autem officia harum! Animi.</p>
+        </div>
+        <div class="feature-image">
+            <img src="http://placehold.it/262x262" alt="">
+        </div>
+    </div>
+    <div class="feature-area" id="tab-2">
+            <div class="feature-text">
+                <h2>Awesome Headline 2</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos sapiente voluptas adipisci, velit voluptatum temporibus asperiores autem officia harum! Animi.</p>
+            </div>
+            <div class="feature-image">
+                <img src="http://placehold.it/262x262" alt="">
+            </div>
+    </div>
+    <div class="feature-area" id="tab-3">
+                <div class="feature-text">
+                    <h2>Awesome Headline 3</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos sapiente voluptas adipisci, velit voluptatum temporibus asperiores autem officia harum! Animi.</p>
+                </div>
+                <div class="feature-image">
+                    <img src="http://placehold.it/262x262" alt="">
+                </div>
+    </div>
+    <div class="feature-area" id="tab-4">
+                    <div class="feature-text">
+                        <h2>Awesome Headline 4</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos sapiente voluptas adipisci, velit voluptatum temporibus asperiores autem officia harum! Animi.</p>
+                    </div>
+                    <div class="feature-image">
+                        <img src="http://placehold.it/262x262" alt="">
+                    </div>
+    </div>
+    <div class="feature-tabs-tabs">
+        <div class="tab1 tab active">
+            <a href="#tab-1">
+                <h3>Feature</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, iste!</p>
+            </a>
+        </div>
+        <div class="tab2 tab">
+                <a href="#tab-2">
+                    <h3>Feature</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, iste!</p>
+                </a>
+        </div>
+        <div class="tab3 tab">
+                <a href="#tab-3">
+                    <h3>Feature</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, iste!</p>
+                </a>
+        </div>
+        <div class="tab4 tab">
+                <a href="#tab-4">
+                    <h3>Feature</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, iste!</p>
+                </a>
+        </div>
+    </div>
+</section>
+<script>
+    window.addEventListener("load", function(){
+
+        //get everything with the class of tab inside of feature-tabs-tabs and assign it to the variable myTabs
+        var myTabs = document.querySelectorAll("div.feature-tabs-tabs div.tab");
+
+
+
+
+        function myTabClicks(tabClickEvent) {
+            for (var i = 0; i < myTabs.length; i++) {
+                myTabs[i].classList.remove("active");
+            }
+            var clickedTab = tabClickEvent.currentTarget;
+
+            clickedTab.classList.add("active");
+
+            tabClickEvent.preventDefault();
+
+            //remove the active class from each content pane
+            var myContentPanes = document.querySelectorAll(".feature-area")
+            for(i = 0; i < myContentPanes.length; i++){
+                myContentPanes[i].classList.remove('active');
+            }
+
+            // Get the clicked on tab and set it as AnchorReference
+            var anchorReference = tabClickEvent.currentTarget;
+            // Get the target of anchor in the clicked on tab and set it as activePaneID
+            var activePaneId = anchorReference.firstElementChild.getAttribute("href");
+            // Set activepane to whatever has the id of the target of the clicked on tab
+            var activePane = document.querySelector(activePaneId);
+
+            // On the pane that is refererred by the clicked on tab, add the class of active.
+            activePane.classList.add('active');
+
+        }
+
+        //listen for tab clicks and run the myTabClicks function
+        for (i = 0; i < myTabs.length; i++) {
+            myTabs[i].addEventListener("click", myTabClicks)
+        }
+    })
+</script>

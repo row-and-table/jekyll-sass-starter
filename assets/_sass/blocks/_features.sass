@@ -153,6 +153,60 @@ section.features-9
         margin-bottom: 1.5em
         .feature
             max-width: 150px
+section.features-tabs
+    padding: 75px
+    +desktop
+        padding: 100px
+    .feature-area
+        display: flex
+        flex-direction: column
+        border-bottom: 2px dashed $gray
+        padding-bottom: 4em
+        +tablet
+            grid-template-columns: repeat(12, 1fr)
+            margin-bottom: 90px
+            display: none
+            border-bottom: none
+            padding-bottom: 0
+            &.active
+                display: grid
+        .feature-text
+            grid-column-start: 1
+            grid-column-end: 5
+            align-self: center
+            text-align: center
+            +tablet
+                text-align: left
+            h2
+                font-size: 2em
+                +tablet
+                    font-size: 3em
+                margin-bottom: 0
+        .feature-image
+            grid-column-start: 7
+            grid-column-end: 13
+            text-align: center
+            justify-self: center
+            align-self: center
+    .feature-tabs-tabs
+        grid-template-columns: repeat(4, 1fr)
+        border-top: 4px solid #E4F1FD
+        display: none
+        +tablet
+            display: grid
+        .tab
+            padding-top: 30px
+            margin-top: -4px
+            &.active
+                border-top: 4px solid #3FA2F7
+            a
+                color: inherit
+                text-decoration: none
+
+
+
+
+
 
 
 
