@@ -1,0 +1,139 @@
+---
+layout: default
+---
+<!-- Paste Navigation Markup Here -->
+
+<nav class="mobile-nav navbar">
+    <a href="#" class="logo"><img src="http://placehold.it/128x34/000000/ffffff?text=x" alt=""></a>
+    <a href="#" class="trigger">Menu</a>
+</nav>
+
+<nav class="navigation-bar-3 navbar">
+    <a href="#" class="logo"><img src="http://placehold.it/128x34?text-logo" alt=""></a>
+    <a href="#" class="trigger2">Menu</a>
+</nav>
+
+
+<div class="hero-2" style="
+ background: url(http://placehold.it/1440x600?text=x) no-repeat center center;
+ background-size: cover;
+">
+    <div class="hero-text">
+        <h1>Awesome Heading</h1>
+        <p>Donec ullamcorper nulla non metus auctor fringilla. Aenean lacinia bibendum nulla sed consectetur.</p>
+        <div class="buttons-row">
+            <a href="#" class="button">CTA Action</a>
+        </div>
+    </div>
+</div>
+<section class="content-1">
+    <div class="wrapper">
+        <img src="http://placehold.it/50x50" alt="">
+        <p>Maecenas faucibus mollis interdum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+    </div>
+</section>
+<section class="testimonials-1">
+    <h2>Testimonials</h2>
+    <div class="testimonial-slider">
+    <div class="testimonial">
+        <img src="https://source.unsplash.com/random/150x150" alt="">
+        <div class="testimonial-content">
+        <h3>Frank Finney</h3>
+        <h4>1st Grade Parent, Terre Haute</h4>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi quas dignissimos odit enim debitis assumenda placeat sit provident? Quidem aliquam laborum fugiat dolor? Nemo, voluptatum.</p>
+        </div>
+    </div>
+    <div class="testimonial showing">
+            <img src="https://source.unsplash.com/random/150x150" alt="">
+            <div class="testimonial-content">
+            <h3>Jane Doe</h3>
+            <h4>Third Grade Parent, Indianapolis</h4>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi quas dignissimos odit enim debitis assumenda placeat sit provident? Quidem aliquam laborum fugiat dolor? Nemo, voluptatum.</p>
+            </div>
+    </div>
+    <div class="testimonial">
+            <img src="https://source.unsplash.com/random/150x150" alt="">
+            <div class="testimonial-content">
+            <h3>Bob Bobson</h3>
+            <h4>Fourth Grade Parent, Evansville</h4>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi quas dignissimos odit enim debitis assumenda placeat sit provident? Quidem aliquam laborum fugiat dolor? Nemo, voluptatum.</p>
+            </div>
+    </div>
+
+</div>
+</section>
+<script>
+        window.addEventListener("load", function(){
+
+            //get everything with the class of tab inside of feature-tabs-tabs and assign it to the variable myTabs
+            var myTabs = document.querySelectorAll("section.testimonials-1 div.testimonial");
+
+
+
+
+            function myTabClicks(tabClickEvent) {
+                for (var i = 0; i < myTabs.length; i++) {
+                    myTabs[i].classList.remove("showing");
+                }
+                var clickedTab = tabClickEvent.currentTarget;
+
+                clickedTab.classList.add("showing");
+
+            }
+
+            //listen for tab clicks and run the myTabClicks function
+            for (i = 0; i < myTabs.length; i++) {
+                myTabs[i].addEventListener("click", myTabClicks)
+            }
+        })
+</script>
+<section class="testimonials-2" style="background: url(https://source.unsplash.com/random/1400x600?v=5); background-size: cover;">
+    <div class="testimonial">
+        <img src="https://source.unsplash.com/random/150x150?v=1" alt="" class="testimonial__thumbnail">
+        <div class="testimonial__details">
+            <h2>John Doe</h2>
+            <p class="testimonial__description">Third Grade Parent, Indianapolis</p>
+            <p class="testimonial__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. At quis autem esse numquam laboriosam repudiandae odio.</p>
+        </div>
+    </div>
+    <div class="testimonial">
+            <img src="https://source.unsplash.com/random/150x150?v=2" alt="" class="testimonial__thumbnail">
+            <div class="testimonial__details">
+                <h2>John Doe</h2>
+                <p class="testimonial__description">Third Grade Parent, Indianapolis</p>
+                <p class="testimonial__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. At quis autem esse numquam laboriosam repudiandae odio, deserunt, maxime </p>
+            </div>
+    </div>
+    <div class="testimonial">
+            <img src="https://source.unsplash.com/random/150x150?v=3" alt="" class="testimonial__thumbnail">
+            <div class="testimonial__details">
+                <h2>John Doe</h2>
+                <p class="testimonial__description">Third Grade Parent, Indianapolis</p>
+                <p class="testimonial__text">Lorem ipsum dolor sit, amet consectetur adipisicing </p>
+            </div>
+    </div>
+    <div class="testimonial">
+            <img src="https://source.unsplash.com/random/150x150?v=3" alt="" class="testimonial__thumbnail">
+            <div class="testimonial__details">
+                <h2>John Doe</h2>
+                <p class="testimonial__description">Third Grade Parent, Indianapolis</p>
+                <p class="testimonial__text">Lorem ipsum dolor sit, amet consectetur adipisicing </p>
+            </div>
+    </div>
+    <div class="testimonial">
+            <img src="https://source.unsplash.com/random/150x150?v=3" alt="" class="testimonial__thumbnail">
+            <div class="testimonial__details">
+                <h2>John Doe</h2>
+                <p class="testimonial__description">Third Grade Parent, Indianapolis</p>
+                <p class="testimonial__text">Lorem ipsum dolor sit, amet consectetur adipisicing </p>
+            </div>
+    </div>
+    <!-- <div class="testimonial">
+            <img src="https://source.unsplash.com/random/150x150?v=4" alt="" class="testimonial__thumbnail">
+            <div class="testimonial__details">
+                <h2>John Doe</h2>
+                <p class="testimonial__description">Third Grade Parent, Indianapolis</p>
+                <p class="testimonial__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. At quis.</p>
+            </div>
+    </div> -->
+</section>

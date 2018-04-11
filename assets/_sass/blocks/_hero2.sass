@@ -1,0 +1,49 @@
+div.hero-2
+    width: 100%
+    min-height: 600px
+    z-index: 1
+    display: grid
+    grid-template-columns: repeat(12, 1fr)
+    grid-gap: 10px
+    padding: 100px 50px 50px 50px
+    +tablet
+        padding: 150px 50px 50px 50px
+
+    .hero-text
+        grid-column-start: 2
+        grid-column-end: 12
+        margin-bottom: 3em
+        align-self: center
+        text-align: center
+        +tablet
+            grid-column-start: 4
+            grid-column-end: 10
+        h1
+            font-size: 2em
+            +tablet
+                font-size: 2.5em
+
+        p
+            font-size: 1em
+            +tablet
+                font-size: 1.4em
+                line-height: 1.8em
+            span.underline
+                text-decoration: underline
+
+    .buttons-row
+        a
+            display: inline-block
+            padding: 13px 30px
+            background-color: $dark
+            color: white
+            text-decoration: none
+            border-radius: 3px
+        a:hover
+            background: transparent
+            color: $dark
+            border: 1px solid $dark
+            padding: 12px 29px
+
+
+

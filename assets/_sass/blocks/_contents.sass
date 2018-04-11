@@ -1,0 +1,162 @@
+section.content-1
+    display: flex
+    width: 100%
+    padding: 50px
+    +tablet
+        padding: 100px
+    text-align: center
+
+    .wrapper
+        width: 700px
+        max-width: 80%
+
+        img
+            margin-bottom: 30px
+        p
+            font-size: 1.2em
+    &.dark
+        color: $white
+section.content-2
+    display: grid
+    width: 100%
+    padding: 50px
+    grid-template-columns: repeat(12, 1fr)
+    grid-column-gap: 20px
+    +tablet
+        padding: 80px
+    &.dark
+        color: $white
+    div.text
+        grid-column-start: 2
+        grid-column-end: 12
+        grid-row-start: 2
+        +tablet
+            grid-column-start: 2
+            grid-column-end: 7
+            grid-row-start: 1
+        align-self: center
+    div.image
+        grid-column-start: 2
+        grid-column-end: 12
+        +tablet
+            grid-column-start: 7
+            grid-column-end: 12
+        align-self: center
+        img
+            max-width: 100%
+section.content-2:nth-child(even)
+        div.text
+            grid-column-start: 2
+            grid-column-end: 12
+            +tablet
+                grid-column-start: 7
+                grid-column-end: 12
+
+        div.image
+            grid-column-start: 2
+            grid-column-end: 12
+            grid-row-start: 1
+            +tablet
+                grid-column-start: 2
+                grid-column-end: 7
+                grid-row-start: 1
+            align-self: center
+            img
+                max-width: 100%
+section.content-3
+    display: grid
+    width: 100%
+    padding: 50px
+    grid-template-columns: repeat(12, 1fr)
+    grid-column-gap: 20px
+    +tablet
+        padding: 80px
+    &.dark
+        color: $white
+    div.text
+        grid-column-start: 1
+        grid-column-end: 12
+        grid-row-start: 2
+        +tablet
+            grid-column-start: 1
+            grid-column-end: 7
+            grid-row-start: 1
+        align-self: start
+    div.image
+        grid-column-start: 1
+        grid-column-end: 12
+        +tablet
+            grid-column-start: 7
+            grid-column-end: 13
+        align-self: center
+        img
+            max-width: 100%
+section.content-3:nth-child(even)
+        div.text
+            grid-column-start: 1
+            grid-column-end: 12
+            +tablet
+                grid-column-start: 7
+                grid-column-end: 13
+
+        div.image
+            grid-column-start: 1
+            grid-column-end: 12
+            grid-row-start: 1
+            +tablet
+                grid-column-start: 1
+                grid-column-end: 7
+                grid-row-start: 1
+            align-self: center
+            img
+                max-width: 100%
+section.content-4
+    display: grid
+    width: 100%
+    min-height: 700px
+    grid-template-columns: repeat(13, 1fr)
+    grid-column-gap: 20px
+    padding: 75px
+    &.dark
+        color: $white
+    div.text
+        grid-column-start: 1
+        grid-column-end: 14
+        grid-row-start: 2
+        background-color: $white
+        +tablet
+            grid-column-start: 8
+            grid-column-end: 14
+        align-self: center
+        padding: 100px
+        min-height: 550px
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        text-align: center
+section.content-4:nth-child(even)
+    display: grid
+    width: 100%
+    min-height: 700px
+    grid-template-columns: repeat(13, 1fr)
+    grid-column-gap: 20px
+    padding: 75px
+    &.dark
+        color: $white
+    div.text
+        grid-column-start: 1
+        grid-column-end: 14
+        grid-row-start: 2
+        background-color: $white
+        +tablet
+            grid-column-start: 1
+            grid-column-end: 7
+        align-self: center
+        padding: 100px
+        min-height: 550px
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        text-align: center
