@@ -1,0 +1,44 @@
+section.gallery-1
+    padding: 75px
+    h2
+        text-align: center
+        font-size: 3em
+    ul.photos
+        list-style-type: none
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        grid-template-rows: repeat(4, 1fr)
+        img
+            cursor: pointer
+    div.image-viewer
+        display: none
+        position: fixed
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+        height: 100%
+        width: 100%
+        z-index: 20
+        background: rgba(0,0,0,.9)
+        &.show
+            display: block
+        a.close-viewer
+            position: absolute
+            top: 10px
+            right: 10px
+            color: $white
+            text-decoration: none
+        .image
+            background-color: $gray
+            margin: 0 auto
+            padding: 20px
+            margin-top: 10vh
+            width: 80%
+            position: relative
+            img
+                width: 100%
+                max-height: 75vh
+                border: 5px solid $gray
+
+
