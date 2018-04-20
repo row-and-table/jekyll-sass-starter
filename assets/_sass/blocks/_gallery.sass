@@ -17,6 +17,7 @@ section.gallery-1
         justify-items: center
         justify-content: center
         grid-template-columns: repeat(auto-fill, 300px)
+        grid-gap: 20px
         img
             cursor: pointer
     div.image-viewer
@@ -36,6 +37,18 @@ section.gallery-1
             position: absolute
             top: 10px
             right: 10px
+            color: $white
+            text-decoration: none
+        a.prev-image
+            position: absolute
+            left: 10px
+            top: 50%
+            color: $white
+            text-decoration: none
+        a.next-image
+            position: absolute
+            right: 10px
+            top: 50%
             color: $white
             text-decoration: none
         .image
