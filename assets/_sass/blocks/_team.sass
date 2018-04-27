@@ -1,0 +1,119 @@
+section.team-1
+    padding: 25px
+    +tablet
+        padding: 75px
+    h2
+        text-align: center
+    ul
+        list-style-type: none
+        padding-left: 0
+        display: grid
+        +tablet
+            grid-template-columns: repeat(2, 1fr)
+        +desktop
+            grid-template-columns: repeat(3, 1fr)
+        grid-column-gap: 30px
+        grid-row-gap: 30px
+        li
+            border: 1px solid lighten($gray, 30%)
+        img
+            width: 100%
+            height: 260px
+            object-fit: cover
+
+    p + p
+        text-indent: 0
+        margin: 0
+    text-align: center
+    .text
+        padding: 1.5em
+        p.name
+            font-size: 1.2em
+            font-weight: 700
+            margin-bottom: 0
+        p.position
+            margin-bottom: 1em
+            margin-top: 0
+        p.description
+            margin-bottom: 1em
+        div.contact
+            border-top: 1px solid lighten($gray, 50%)
+            display: flex
+            justify-content: space-between
+            padding-top: 1.5em
+            font-size: .75em
+section.team-2
+    padding: 25px
+    +tablet
+        padding: 75px
+    h2
+        text-align: center
+    ul
+        list-style-type: none
+        padding-left: 0
+        display: grid
+        +tablet
+            grid-template-columns: repeat(2, 1fr)
+        +desktop
+            grid-template-columns: repeat(3, 1fr)
+        grid-column-gap: 30px
+        grid-row-gap: 30px
+        li
+            width: 360px
+            height: 400px
+            position: relative
+            img
+                width: 360px
+                height: 400px
+                position: absolute
+                top: 0
+                left: 0
+                right: 0
+                bottom: 0
+                object-fit: cover
+            &:hover .text
+                display: block
+    p + p
+        text-indent: 0
+        margin: 0
+    text-align: center
+    .text
+        padding: 1.5em
+        position: absolute
+        width: 360px
+        height: 400px
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+        background-color: rgba(255, 255, 255, 0.8)
+        display: flex
+        flex-direction: column
+        justify-content: center
+        display: none
+        p.name
+            font-size: 1.2em
+            font-weight: 700
+            margin-bottom: 0
+            flex-grow: 1
+        p.position
+            margin-bottom: 1em
+            margin-top: 0
+            flex-grow: 1
+        p.description
+            margin-bottom: 1em
+            flex-grow: 1
+        div.contact
+            border-top: 1px solid lighten($gray, 50%)
+            flex-grow: 2
+            display: flex
+            height: 1em
+            width: 100%
+            justify-self: flex-end
+            justify-content: space-between
+            padding-top: 1.5em
+            font-size: .75em
+
+
+
+
