@@ -1,0 +1,35 @@
+section.page-subnav
+    ul.submenu
+        list-style-type: none
+        margin-left: 0
+        padding-left: 0
+        background: lighten($gray, 50%)
+        width: 100%
+        border-top: 2px solid $gray
+        margin-bottom: 2em
+        li
+            padding: 1em
+            border-bottom: 1px solid $gray
+            position: relative
+            &:last-child
+                border-bottom: none
+            &:after
+                content: '►'
+                position: absolute
+                right: 1em
+                // font-size: 1.2em
+            &:hover
+                background: lighten($gray, 45%)
+                color: $dark
+                a
+                    color: $dark
+            &.active
+                background: lighten($gray, 47%)
+                color: $bright
+                a
+                    color: $bright
+
+            a
+                color: $gray
+                text-decoration: none
+                font-weight: 700

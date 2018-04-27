@@ -1,0 +1,29 @@
+section.page-header
+    min-height: 130px
+    color: $white
+    .content
+        max-width: 1200px
+        padding: 50px
+        margin-left: auto
+        margin-right: auto
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: flex-start
+    h1
+        color: $white
+    .breadcrumb
+        list-style-type: none
+        margin-left: 0
+        padding-left: 0
+    .breadcrumb li
+        display: inline
+        a
+            text-decoration: none
+            color: inherit
+        &.current
+            a
+                font-style: italic
+                cursor: default
+    .breadcrumb li+li:before
+        content: "» "

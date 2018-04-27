@@ -1,0 +1,80 @@
+<section class="gallery gallery-1">
+    <h2 id="gallery">Gallery</h2>
+    <ul class="photos">
+        <li>
+            <img src="https://source.unsplash.com/300x300/?church" data-full-path="https://source.unsplash.com/1200x800/?church"
+                alt="">
+        </li>
+        <li>
+            <img src="https://source.unsplash.com/300x300/?bible" data-full-path="https://source.unsplash.com/1200x800/?bible"
+                alt="">
+        </li>
+        <li>
+            <img src="https://source.unsplash.com/300x300/?book" data-full-path="https://source.unsplash.com/1200x800/?book"
+                alt="">
+        </li>
+        <li>
+            <img src="https://source.unsplash.com/300x300/?snow" data-full-path="https://source.unsplash.com/1200x800/?snow"
+                alt="">
+        </li>
+        <li>
+            <img src="https://source.unsplash.com/300x300/?coffee" data-full-path="https://source.unsplash.com/1200x800/?coffee"
+                alt="">
+        </li>
+        <li>
+            <img src="https://source.unsplash.com/300x300/?cross" data-full-path="https://source.unsplash.com/1200x800/?cross"
+                alt="">
+        </li>
+        <li>
+            <img src="https://source.unsplash.com/300x300/?lake" data-full-path="https://source.unsplash.com/1200x800/?lake"
+                alt="">
+        </li>
+        <li>
+            <img src="https://source.unsplash.com/300x300/?laptop" data-full-path="https://source.unsplash.com/1200x800/?laptop"
+                alt="">
+        </li>
+    </ul>
+    <div class="image-viewer">
+        <div class="image">
+            <a href="#gallery" class="close-viewer">X</a>
+            <!-- Add the javascript for these later -->
+            <!--<a href="#previous" class="prev-image"><</a>-->
+            <!--<a href="#next" class="next-image">></a>-->
+            <img src="https://source.unsplash.com/300x300/?church" alt="">
+        </div>
+        <img src="" alt="">
+    </div>
+    <script>
+        const gallery = document.getElementById('gallery').getBoundingClientRect();
+        var photoLinks = document.querySelectorAll('.photos li'),
+            result;
+        const popUp = document.querySelector('.image-viewer');
+        const popUpImage = document.querySelector('.image-viewer .image img');
+        const closeButton = document.querySelector('a.close-viewer');
+        const popupBox = document.querySelector('.image-viewer .image');
+
+        function ShowPopUp(e) {
+            //Get full URL of clicked image
+            const imageUrl = e.target.getAttribute('data-full-path');
+            //Replace the image url on the popup with the image url of the clicked image
+            popUpImage.setAttribute("src", imageUrl);
+            //Add show class to the popup
+            popUp.classList.add('show');
+            //scroll to the top
+            window.scrollTo(0, 0);
+            //popupBox.style.marginTop = gallery.top + 'px';
+        };
+
+        function closePopUp() {
+            window.scrollTo(0, gallery.y);
+            popUp.classList.remove('show');
+        };
+
+        for (i = 0; i < photoLinks.length; i++) {
+            result = photoLinks[i];
+            result.addEventListener('click', ShowPopUp);
+        };
+        closeButton.addEventListener('click', closePopUp);
+        // window.addEventListener('click', ShowPopUp);
+    </script>
+</section>

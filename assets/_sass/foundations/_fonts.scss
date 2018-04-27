@@ -8,9 +8,70 @@ $text-font: 'Roboto', sans-serif;
 
 * {
 	font-family: $main-font;
+	line-height: 1.4;
 }
 
 .text {
 	font-family: $text-font;
 
 }
+
+h1, .h1 {
+	font-size: 2.72222222em;
+	line-height: 1.02040816em;
+	margin-top: 0.51020408em;
+	margin-bottom: 1.02040816em;
+  }
+  h2, .h2 {
+	font-size: 1.94444444em;
+	line-height: 1.42857143em;
+	margin-top: 0.71428571em;
+	margin-bottom: 0.71428571em;
+  }
+  h3, .h3 {
+	font-size: 1.38888889em;
+	line-height: 1em;
+	margin-top: 1em;
+	margin-bottom: 0em;
+  }
+  h4, .h4 {
+	font-size: 1em;
+	line-height: 1.38888889em;
+	margin-top: 1.38888889em;
+	margin-bottom: 0em;
+  }
+  h5, .h5 {
+	font-size: 1em;
+	line-height: 1.38888889em;
+	margin-top: 1.38888889em;
+	margin-bottom: 0em;
+  }
+  p, ul, ol, pre, table, blockquote {
+	margin-top: 0em;
+	margin-bottom: 1.38888889em;
+  }
+  ul ul, ol ol, ul ol, ol ul {
+	margin-top: 0em;
+	margin-bottom: 0em;
+  }
+
+  /* Let's make sure all's aligned */
+  hr, .hr {
+	border: 1px solid;
+	margin: -1px 0;
+  }
+  a, b, i, strong, em, small, code {
+	line-height: 0;
+  }
+  sub, sup {
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+  }
+  sup {
+	top: -0.5em;
+  }
+  sub {
+	bottom: -0.25em;
+  }
+
