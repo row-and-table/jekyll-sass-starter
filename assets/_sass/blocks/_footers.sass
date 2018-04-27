@@ -1,0 +1,53 @@
+footer.style-1
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    padding: 50px
+    background: lighten($gray, 45%)
+    ul
+        list-style-type: none
+        padding-left: 0
+        margin-bottom: 1em
+        +tablet
+            margin-bottom: 0
+        li
+            display: inline-block
+            margin-right: 1em
+            margin-bottom: 0
+            a
+                color: $bright
+                text-decoration: none
+                font-weight: 700
+footer.style-2
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: center
+    background: lighten($gray, 45%)
+    img.logo
+        margin-left: 2em
+    ul.right
+        margin-right: 2em
+    ul.center
+        display: none
+        +desktop
+            display: block
+    ul
+        list-style-type: none
+        padding-left: 0
+        margin-bottom: 2em
+        margin-top: 2em
+        li
+            display: inline-block
+            margin-right: 1em
+            margin-bottom: 0
+            a
+                color: $bright
+                text-decoration: none
+                font-weight: 700
+    div.bottom
+        width: 100%
+        text-align: center
+        padding: 1em
+        border-top: 1px solid $gray
+
