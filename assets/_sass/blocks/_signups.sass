@@ -1,0 +1,98 @@
+section.signup-1
+    background: lighten($gray, 50%)
+    display: grid
+    grid-template-columns: repeat(12, 1fr)
+    div.main
+        padding: 50px
+        justify-self: center
+        align-self: center
+        grid-column: 1 / 12
+        +tablet
+            padding: 90px
+            grid-column: 1 / 7
+        +desktop
+            padding: 175px 149px
+        form
+            input
+                background: white
+                margin-bottom: 1em
+                border-radius: 0
+                border: none
+                color: $dark
+            input[type="submit"]
+                background: $bright
+                color: white
+    div.image
+        justify-self: end
+        align-self: center
+        grid-column: 7 / 12
+        img
+            width: 100%
+        display: none
+        +tablet
+            display: block
+section.signup-2
+    text-align: center
+    padding: 80px
+    form
+        display: flex
+        justify-content: center
+        align-items: center
+        input[type="email"]
+            width: 350px
+            height: 3em
+            background: lighten($gray, 50%)
+            border: none
+            border-radius: 0
+            color: $dark
+            padding-left: 1em
+            padding-right: 1em
+        input[type="submit"]
+            height: 3em
+            background: $bright
+            color: white
+            border: none
+            border-radius: 0
+section.signup-3
+    display: grid
+    +tablet
+        grid-template-columns: 35% 65%
+    grid-column-gap: 50px
+    padding: 50px 100px
+    background: lighten($gray, 50%)
+    form
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 100%
+        input[type="email"]
+            width: 75%
+            height: 3em
+            background: white
+            border: none
+            border-radius: 0
+            color: $dark
+            padding-left: 1em
+            padding-right: 1em
+        input[type="submit"]
+            height: 3em
+            background: $bright
+            +tablet
+                width: 25%
+            color: white
+            border: none
+            border-radius: 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+

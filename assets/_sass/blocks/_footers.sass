@@ -26,7 +26,13 @@ footer.style-2
     background: lighten($gray, 45%)
     img.logo
         margin-left: 2em
+        display: none
+        +tablet
+            display: block
     ul.right
+        margin-left: 2em
+        +tablet
+            margin-left: 0
         margin-right: 2em
     ul.center
         display: none
@@ -45,6 +51,10 @@ footer.style-2
                 color: $bright
                 text-decoration: none
                 font-weight: 700
+                svg
+                    width: 30px
+                    height: 30px
+                    fill: $bright
     div.bottom
         width: 100%
         text-align: center
