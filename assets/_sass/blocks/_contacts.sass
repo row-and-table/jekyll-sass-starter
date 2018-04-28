@@ -65,7 +65,8 @@ section.contact-4
     text-align: center
     form
         display: grid
-        grid-template-columns: 50% 50%
+        +tablet
+            grid-template-columns: 50% 50%
         max-width: 740px
         margin-left: auto
         margin-right: auto
@@ -76,6 +77,9 @@ section.contact-4
             padding: 1em
             background: lighten($gray, 50%)
             margin-bottom: 2em
+            grid-column: span 2
+            +tablet
+                grid-column: span 1
             color: $dark
         textarea
             grid-column: span 2

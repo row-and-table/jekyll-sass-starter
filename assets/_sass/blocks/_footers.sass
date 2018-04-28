@@ -60,4 +60,125 @@ footer.style-2
         text-align: center
         padding: 1em
         border-top: 1px solid $gray
+footer.style-3
+    div.top
+        display: flex
+        flex-wrap: wrap
+        padding: 2em
+        +tablet
+            padding: 75px 75px 0px 75px
+        p
+            margin: 0 1em 2em 0
+            +tablet
+                margin: 0 4em 2em 0
+        span
+            font-size: 1.1em
+            font-weight: 700
+        p + p
+            text-indent: 0
+        ul.footer-menu
+            list-style-type: none
+            display: none
+            +tablet
+                display: block
+            padding-left: 0
+            font-weight: 700
+            flex-grow: 2
+            text-align: right
+            li
+                line-height: 2
+            a
+                color: $dark
+                text-decoration: none
+    div.bottom
+        display: flex
+        justify-content: flex-end
+        align-items: center
+        padding: 1em
+        border-top: 1px solid lighten($gray, 50%)
+        p
+            margin: 0
+        a
+            height: 17px
+            svg
+                display: none
+                +tablet
+                    display: block
+                height: 17px
+                width: inherit
+footer.style-4
+    div.top
+        display: flex
+        flex-wrap: wrap
+        padding: 2em
+        +tablet
+            padding: 75px 75px 0px 75px
+        p
+            margin: 0 1em 2em 0
+            +tablet
+                margin: 0 4em 2em 0
+        span
+            font-size: 1.1em
+            font-weight: 700
+        p + p
+            text-indent: 0
+        div.footer-menu
+            display: none
+            +tablet
+                display: block
+            p
+                font-size: 1.1em
+                font-weight: 700
+                margin-bottom: 0
+            ul
+                list-style-type: none
+                display: none
+                +tablet
+                    display: block
+                padding-left: 0
+                font-weight: 400
+                li
+                    line-height: 2
+                a
+                    color: $dark
+                    text-decoration: none
+                    &:hover
+                        text-decoration: underline
+        div.social-links
+            display: none
+            +tablet
+                display: block
+            p
+                font-size: 1.1em
+                font-weight: 700
+                margin-bottom: 0
+            ul
+                list-style-type: none
+                padding-left: 0
+                font-weight: 400
+                li
+                    line-height: 2
+                    display: inline-block
+                a
+                    color: $dark
+                    text-decoration: none
+                    svg
+                        height: 17px
+                        width: inherit
+    div.bottom
+        display: flex
+        justify-content: flex-end
+        align-items: center
+        padding: 1em
+        border-top: 1px solid lighten($gray, 50%)
+        p
+            margin: 0
+        a
+            height: 17px
+            svg
+                display: none
+                +tablet
+                    display: block
+                height: 17px
+
 
